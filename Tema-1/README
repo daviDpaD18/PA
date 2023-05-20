@@ -1,0 +1,36 @@
+
+Tema-Pa Paduretu David-Pavel 322CC
+
+Problema1 : Feribot
+    Pentru rezolvarea problemei am folosit un algoritm de cautare binara , capatul din stanga e cel mai mare element din 
+    vectorul de greutati ale masinilor si capatul din dreapta suma tuturor greuatilor masinilor . Luam mijlocul intervalului
+    de cautare egal cu media dintre capatul din stanga si cel din dreapta. Apelam metoda verificare cu mijlocul dat ca 
+    parametru . In metoda verificare cost este rezulatatul cautat de problema , cat timp avem masini adaugam greutate(costul)
+    unei masini la costul curent si avem grija sa nu depaseasca costul maxim pe feribot , daca a depasit incrementam numarul de 
+    feriboturi si la final verificam daca am umplut toate feriboturile in costul maxim. Am implementat metodele auxiliare 
+    vectorSum - imi calculeaza suma tuturor elementelor dintr un vector
+    findLargestElement - gaseste cel mai mare element din vector
+
+
+Problema2 : Nostory
+    Task1: Am observat ca scorul optim este egal cu suma primelor n cele mai mare elemente din ambii vectori.
+    Imi iau un vector de marimea 2*n in care adaug al doilea vector b dat la finalul primului. Calculez scorul initial cu
+    functia ajutatoare scor implementata. Intr un while iau doua valori aleatoare de indici pentru a face mutari si verific
+    mereu daca scorul nou este mai mare decat cel curent. Daca e egal cu scorul optim opresc while ul si dau return la scorul
+    cautat.
+    Task2: Am luat 2 vectori unul de minime si unul de maxime . Pt cei doi vectori dati comparam elementele de pe aceeasi pozitie 
+    elementul mai mic il punem in vectorul de minime si celalalt in vectorul de maxime. Sortam cei doi vectori . Pe cel de minime il 
+    punem elementele in ordine descrescatoare . Si pt nr dat de mutari facem un for si vedem daca cel exista un element in minime mai mare decat
+    cel din maxime aflat pe aceeasi pozitie si il inlocuim in cel de maxime. Scorul cautat e egal cu suma elementelor din vectorul de maxime.
+
+
+Problema3 : Sushi
+    Task1: Pentru primul task am observat ca este asemanatoare cu problema rucsacului la care avem data rezolvarea in laborator.
+    Vectorul de greutate din problema rucsacului e echivalentul vectorului de preturi pt fiecare platou.Vectorul de preturi este un vector facut 
+    pt fiecare platou . Fiecare element din vector este egal cu suma notelor date de fiecare prieten pentru platoul respectiv.
+    Task2: Folosim o abordare similara pentru task1 ul unu doar ca pentru a putea lua maxim 2 platouri doar ca fiecare vector se dubleaza elementele
+    se dubleaza in vectori.
+    Task3: Facem matricea dp tridimensionala , am adaugat o noua dimensiune pentru a respecta restrictia de a nu avea mai mult de 
+    N platouri . Iteram peste platouri similar ca la task ul 2 pentru a lua maxim 2 platouri din ficare fel.
+    Am declarat o clasa Plate care are un pret si averageGrade egal cu suma notelor date de fiecare prieten fiecarui platou.
+    Metoda notaMedie imi intoarce un vector de plate uri , trecand prin matricea de note si dat calculand suma notelor pt fiecare platou.
